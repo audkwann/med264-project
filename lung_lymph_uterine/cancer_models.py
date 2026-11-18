@@ -34,7 +34,7 @@ results = []
 
 for cancer in cancers:
     for sex in ["Both", "Male", "Female"]:
-        for years in ["05yr", "10yr"]:          # check exact labels with df.Years.unique()
+        for years in ["05yr", "10yr"]:
             cancer_df = df[(df.Cancer == cancer) & (df.Sex == sex) & (df.Years == years)]
             cancer_df = cancer_df.dropna(subset=["AAIR"])
             if len(cancer_df) < 100:
@@ -42,9 +42,6 @@ for cancer in cancers:
             assert cancer_df["AreaID"].is_unique   
             
             for name, feature in features.items():
-                # print(f"Modeling {cancer} cancer with {name} features.")
-                # cancer_df = df[df.Cancer == cancer].copy()
-                # cancer_df = cancer_df.dropna(subset=["AAIR"])
                 if cancer == "Uterine" and name == "Medical":
                     feature = ["PerDocVisit","PerWomenPrev"]
                 X, y = cancer_df[feature], cancer_df["AAIR"]
@@ -60,8 +57,6 @@ for cancer in cancers:
                 model.fit(X_train, y_train)
 
                 pred = model.predict(X_test)
-                # print("Test R²:", r2_score(y_test, pred))
-                # print("Test RMSE:", mean_squared_error(y_test, pred) ** 0.5)
                 results.append({
                     "cancer": cancer,
                     "sex": sex, 
