@@ -1,0 +1,52 @@
+California Health Maps
+https://www.californiahealthmaps.org
+
+Fields in this CSV data file.
+
+AreaID              The area's unique ID (CTA Zone ID, FIPS code, etc.)
+Counties            A comma-joined list of counties touching this CTA Zone.
+Cities              A comma-joined list of cities within or partly within the CTA Zone. Not all smaller towns and settlements are represented.
+URL                 URL to see more information about this CTA Zone at https://www.californiahealthmaps.org
+
+Sex                 Cancer type is aggregated by sex and by cancer site. This is the sex.
+Cancer              Cancer type is aggregated by sex and by cancer site. This is the cancer site on the body.
+PopTot              Total population for math purposes.
+AAIR                Age-Adjusted Incidence Rate (AAIR) for this sex and cancer site.
+LCI                 Lower value of the 95% confidence interval of the AAIR.
+UCI                 Upper value of the 95% confidence interval of the AAIR.
+
+White_PopTot        PopTot population, of cases in people identified as non-Hispanic White race/ethnicity.
+White_AAIR          AAIR, of cases in people identified as non-Hispanic White race/ethnicity.
+White_LCI           LCI, of cases in people identified as non-Hispanic White race/ethnicity.
+White_UCI           UCI, of cases in people identified as non-Hispanic White race/ethnicity.
+Black_PopTot        PopTot population, of cases in people identified as non-Hispanic Black race/ethnicity.
+Black_AAIR          AAIR, of cases in people identified as non-Hispanic Black race/ethnicity.
+Black_LCI           LCI, of cases in people identified as non-Hispanic Black race/ethnicity.
+Black_UCI           UCI, of cases in people identified as non-Hispanic Black race/ethnicity.
+Hispanic_PopTot     PopTot population, of cases in people identified as Hispanic race/ethnicity.
+Hispanic_AAIR       AAIR, of cases in people identified as Hispanic race/ethnicity.
+Hispanic_LCI        LCI, of cases in people identified as Hispanic race/ethnicity.
+Hispanic_UCI        UCI, of cases in people identified as Hispanic race/ethnicity.
+Asian_PopTot        PopTot population, of cases in people identified as Asian/Pacific Islander race/ethnicity.
+Asian_AAIR          AAIR, of cases in people identified as Asian/Pacific Islander race/ethnicity.
+Asian_LCI           LCI, of cases in people identified as Asian/Pacific Islander race/ethnicity.
+Asian_UCI           UCI, of cases in people identified as Asian/Pacific Islander race/ethnicity.
+
+PopAll              Population of the CTA Zone.
+PerUninsured        Percent of residents who did not have health insurance.
+PerWhite            Percentage of population identified as non-Hispanic White race/ethnicity.
+PerBlack            Percentage of population identified as non-Hispanic Black race/ethnicity.
+PerHispanic         Percentage of population identified as Hispanic race/ethnicity.
+PerAsian            Percentage of population identified as Asian/Pacific Islander race/ethnicity.
+PerForeignBorn      Percent of residents who were born outside the United States.
+PerRural            Percent of residents who reside in blocks that are designated as rural.
+QNSES               Statewide quintiles of a composite measure of seven indicator variables created by principal component analysis;
+                    indicators include: education, blue collar job, unemployment, household income, poverty, rent, and house value
+                    (Quintile 5=highest socioeconomic status, Quintile 1=lowest socioeconomic status).
+
+PerFOBT             Percent of adults aged 40+ years who have received colorectal cancer screening.
+PerMammo            Percent of women aged 50-74 years who have received a mammogram in the past 2 years.
+PerMenPrev          Percent of men 65+ years who have received all standard preventative care.
+PerWomenPrev        Percent of women 65+ years who have received all standard preventative care.
+PerDocVisit         Percent of adults who have had a routine checkup in the previous year.
+PerCervical              Percent of women who have received a pap smear in the past 3 years.
