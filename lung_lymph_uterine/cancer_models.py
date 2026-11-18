@@ -74,10 +74,10 @@ for cancer in cancers:
                     "ridgecv_alpha": model.named_steps["ridgecv"].alpha_, # selected by the RidgeCV algorithm
                 })
 
-pd.DataFrame(results).to_csv("model_results.csv", index=False)
+pd.DataFrame(results).to_csv("lung_lymph_uterine/model_results.csv", index=False)
 
 # Generate heatmap
-results = pd.read_csv("model_results.csv")
+results = pd.read_csv("lung_lymph_uterine/model_results.csv")
 order = ["All", "Race", "Medical", "Socioeconomic", "Insurance", "Foreign", "Population Count"]
 results["group"] = results["cancer"] + " | " + results["sex"] + " | " + results["years"]
 heat = results.pivot(index="group", columns="feature", values="test_r2")[order]
@@ -94,4 +94,4 @@ ax.set_xlabel("Feature")
 ax.set_ylabel("Cancer Type")
 ax.set_title("Test Set R²")
 plt.tight_layout()
-plt.savefig("results_heatmap.png", dpi=200)
+plt.savefig("lung_lymph_uterine/results_heatmap.png", dpi=200)
